@@ -5,7 +5,7 @@ import numpy as np
 from descriptor import glcm, bitdesc
 
 def extract_features(image_path, descriptor_func):
-    print(f"Reading image from: {image_path}")  # Debugging line
+    print(f"Reading image from: {image_path}")  # test
     if not isinstance(image_path, str):
         print(f"Invalid image path type: {type(image_path)}. Expected str.")
         return None
@@ -19,21 +19,21 @@ def extract_features(image_path, descriptor_func):
         print(f"Failed to read image from: {image_path}")
         return None
     
-    print(f"Image type: {type(img)}, Image shape: {img.shape}")  # Debugging line
+    print(f"Image type: {type(img)}, Image shape: {img.shape}")  # test
     features = descriptor_func(img)
     return features
 
 def process_datasets(root_folder, descriptor_func, output_file):
-    all_features = [] # List to store all features and metadata
+    all_features = [] 
     for root, dirs, files in os.walk(root_folder):
         for file in files:
             if file.lower().endswith(('.jpg', '.png', '.jpeg')):
-                # Construct relative path
+                
                 image_rel_path = os.path.join(root, file)
-                print(f"Processing file: {image_rel_path}")  # Debugging line
+                print(f"Processing file: {image_rel_path}")  # test
                 
                 if not os.path.isfile(image_rel_path):
-                    print(f"File does not exist: {image_rel_path}")  # Debugging line
+                    print(f"File does not exist: {image_rel_path}")  # test
                     continue
                 
                 relative_path = os.path.relpath(image_rel_path, root_folder)
@@ -50,10 +50,10 @@ def process_datasets(root_folder, descriptor_func, output_file):
     np.save(output_file, signatures)
     print(f'Successfully stored in {output_file}!')
 
-# Process datasets for GLCM
+# Process datasets for glcm
 process_datasets('./dataset', glcm, 'glcm_signatures.npy')
 
-# Process datasets for Bitdesc
+# Process datasets for bitdces
 process_datasets('./dataset', bitdesc, 'bitdesc_signatures.npy')
 
 

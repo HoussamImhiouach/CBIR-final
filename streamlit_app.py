@@ -7,7 +7,7 @@ import numpy as np
 import cv2
 import os
 
-# Load precomputed signatures
+# Load signatures
 glcm_signatures = np.load('glcm_signatures.npy', allow_pickle=True)
 bitdesc_signatures = np.load('bitdesc_signatures.npy', allow_pickle=True)
 
@@ -21,7 +21,7 @@ def main():
     # File uploader with multiple extensions
     file = st.file_uploader("Upload a file", type=["csv", "txt", "jpg", "png"])
     
-    # function to display the sidebar, the options and taking the different inputs
+    # to display the sidebar, the options and taking the different inputs
     input_values = user_input_parameters()
     
     # dsiplaying values on checkboxes
@@ -36,7 +36,7 @@ def main():
         descriptor_func = descriptor_funcs[input_values["Descriptor"]]
         query_features = descriptor_func(img)
         
-        # Choose the correct signatures database
+        # Choose the signature
         if input_values["Descriptor"] == "GLCM":
             signature_db = glcm_signatures
         elif input_values["Descriptor"] == "Bitdesc":
@@ -45,10 +45,10 @@ def main():
         # Choose the correct distance function
         distance_func = distance_funcs[input_values["Distance"]]
         
-        # Retrieve similar images
+        # retrieve the "similar" images
         similar_images = retrieve_similar_images(signature_db, query_features, distance_func, input_values["Number"])
         
-        # Display the query features
+        
         st.write(f"Extracted features: {query_features}")
         
         # Display the similar images in rows of 3
@@ -58,7 +58,7 @@ def main():
             for j in range(3):
                 if i + j < len(similar_images):
                     img_path, dist, label = similar_images[i + j]
-                    full_img_path = os.path.join('./dataset', img_path)  # assuming images are in the 'dataset' folder
+                    full_img_path = os.path.join('./dataset', img_path)  
                     st.write(f"Displaying image from: {full_img_path}")
                     if os.path.exists(full_img_path):
                         cols[j].image(full_img_path, caption=f"Similar image {i + j + 1} with distance {dist}")
