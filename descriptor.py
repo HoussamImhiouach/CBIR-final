@@ -2,7 +2,7 @@
 import cv2
 import numpy as np
 from skimage.feature import graycomatrix, graycoprops
-from BiT import bio_taxo
+from bitdesc import bio_taxo
 
 def glcm(image):
     co_matrix = graycomatrix(image, [1], [0], symmetric=True, normed=True)
