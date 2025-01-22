@@ -7,6 +7,7 @@ pillow
 mahotas
 pandas
 scikit-image
+bitdesc==0.1.4
 
 
 
