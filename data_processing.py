@@ -2,7 +2,7 @@
 import cv2
 import os
 import numpy as np
-from descriptor import glcm, bitdesc
+from descriptor import glcm, bitdesc, haralick, concatenate_descriptors
 
 def extract_features(image_path, descriptor_func):
     print(f"Reading image from: {image_path}")  # test
@@ -55,5 +55,11 @@ process_datasets('./dataset', glcm, 'glcm_signatures.npy')
 
 # Process datasets for bitdces
 process_datasets('./dataset', bitdesc, 'bitdesc_signatures.npy')
+
+# Process datasets for haralick
+process_datasets('./dataset', haralick, 'haralick_signatures.npy')
+
+# Process datasets for concatenated descriptors
+process_datasets('./dataset', concatenate_descriptors, 'concatenated_signatures.npy')
 
 

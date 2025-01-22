@@ -15,6 +15,23 @@ def glcm(image):
     return [diss, cont, corr, ener, asm, homo]
 
 def bitdesc(image):
-    return bio_taxo(image)
+    return bio_taxo(image)  
 
+def haralick(image):
+    glcm = graycomatrix(image, distances=[1], angles=[0, np.pi/4, np.pi/2, 3*np.pi/4], symmetric=True, normed=True)
 
+# Extract Haralick features
+    haralick_features = []
+    props = ['contrast', 'dissimilarity', 'homogeneity', 'energy', 'correlation', 'ASM']
+    for prop in props:
+        haralick_features.append(graycoprops(glcm, prop).mean())
+
+    return haralick_features
+
+def concatenate_descriptors(image):
+    glcm_features = glcm(image)
+    bitdesc_features = bitdesc(image)
+    haralick_features = haralick(image)
+    
+    # Concatenate the feature vectors
+    return glcm_features + bitdesc_features + haralick_features

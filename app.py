@@ -1,10 +1,11 @@
-from descriptor import glcm, bitdesc
+from descriptor import glcm, bitdesc, haralick
 
 path = 'dataset'
 
 def main():
     feat_glcm = glcm(path)
     feat_bit = bitdesc(path)
+    feat_haralick= haralick(path)
     
     
     print(f'GLCM\n-----\n{feat_glcm}')
