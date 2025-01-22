@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Content-Based Image Retrieval (CBIR) project is a Python application designed to retrieve visually similar images from a dataset based on the content of a query image. Built with **Streamlit**, this interactive tool utilizes advanced image descriptors like **GLCM**, **BitDesc**, and **Haralick**, combined with **LDA classification**, to deliver accurate and efficient retrieval.
+The Content-Based Image Retrieval (CBIR) project is a Python application designed to retrieve visually similar images from a dataset based on the content of a query image. Built with **Streamlit**, this interactive tool utilizes advanced image descriptors like **GLCM**, **BitDesc**, and **Haralick**, combined with **LDA classification**, to deliver accurate and efficient retrieval. It is an AI-powered computer vision system that automates feature extraction, classification, and similarity matching for images.
 
 ## Dataset
 
@@ -10,12 +10,12 @@ This project uses an image dataset that can be stored locally or on the cloud.
 
 ## Features
 
-- **Image Upload**: Upload an image as a query.
-- **Feature Extraction**: Choose from GLCM, BitDesc, or Haralick for content analysis.
-- **LDA Classification**: Classify images to improve retrieval accuracy.
-- **Visualization**:
-  - Retrieve and display similar images.
-  - View a bar graph illustrating the folder-wise distribution of similar images.
+- **AI-Powered Feature Extraction**: Automates content analysis using GLCM, BitDesc, or Haralick descriptors.
+- **LDA Classification**: Leverages Linear Discriminant Analysis to improve retrieval accuracy.
+- **Interactive Visualization**:
+  - Retrieves and displays similar images.
+  - Shows a bar graph illustrating folder-wise distribution of similar images.
+- **Scalable Design**: Efficiently handles datasets of varying sizes.
 
 ## How to Use
 
@@ -67,14 +67,28 @@ Follow these steps to set up the project locally:
 
 ## Technologies Used
 
-- **Programming Language**: Python
-- **Frontend Framework**: Streamlit
-- **Libraries**:
-  - **NumPy**: Numerical operations
-  - **OpenCV**: Image processing
-  - **Scikit-learn**: Machine learning algorithms
-  - **Matplotlib**: Data visualization
-  - **Pillow**: Image file handling
+This project integrates multiple technologies from the fields of AI, computer vision, and web development:
+
+- **Programming Language**:
+
+  - Python 3.8+
+
+- **Libraries and Frameworks**:
+
+  - **Streamlit**: For building an interactive user interface.
+  - **NumPy**: For numerical operations.
+  - **OpenCV**: For image processing.
+  - **Scikit-learn**: For implementing LDA classification and other machine learning techniques.
+  - **Matplotlib**: For data visualization.
+  - **Pillow**: For image file handling.
+  - **Mahotas**: For Haralick descriptor calculations.
+  - **BitDesc**: For feature extraction using bio-inspired descriptors.
+  - **Seaborn**: For enhancing visualizations.
+
+- **Tools**:
+  - **GitHub**: For version control and collaboration.
+  - **Streamlit Cloud**: For deployment (if hosted).
+  - **VS Code**: As the primary development environment.
 
 ## Directory Structure
 
