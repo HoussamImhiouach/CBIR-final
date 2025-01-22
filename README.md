@@ -40,7 +40,7 @@ This project uses an image dataset that can be stored locally or on the cloud.
 
 ## Demo Video
 
-[![CBIR Demo](screenshots/UI%201.png)](https://www.youtube.com/watch?v=tAgrRCHSZtg)
+Watch the full demo video [here](screenshots/full%20demo%20video.mp4).
 
 ## Installation
 
