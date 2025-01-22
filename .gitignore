@@ -1,0 +1,25 @@
+# Ignore Python compiled files
+*.pyc
+__pycache__/
+
+# Ignore virtual environment
+venv/
+env/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
+
+# Ignore IDE files (VS Code, PyCharm, etc.)
+.vscode/
+.idea/
+
+# Ignore datasets or large files
+dataset/
+*.npy  # NumPy binary files
+
+# Ignore deployment-specific files
+packages.txt
