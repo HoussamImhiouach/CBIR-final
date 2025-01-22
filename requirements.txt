@@ -7,4 +7,5 @@ pillow
 mahotas
 pandas
 scikit-image
-BitDesc
+bitdesc
+
