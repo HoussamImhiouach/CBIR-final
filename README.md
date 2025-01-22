@@ -1,5 +1,9 @@
 # Content-Based Image Retrieval (CBIR) Project
 
+![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
+![Python](https://img.shields.io/badge/Python-3.8+-brightgreen.svg)
+![Streamlit](https://img.shields.io/badge/Built%20With-Streamlit-orange.svg)
+
 ## Overview
 
 The Content-Based Image Retrieval (CBIR) project is a Python application designed to retrieve visually similar images from a dataset based on the content of a query image. Built with **Streamlit**, this interactive tool utilizes advanced image descriptors like **GLCM**, **BitDesc**, and **Haralick**, combined with **LDA classification**, to deliver accurate and efficient retrieval. It is an AI-powered computer vision system that automates feature extraction, classification, and similarity matching for images.
