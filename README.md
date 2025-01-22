@@ -23,6 +23,25 @@ This project uses an image dataset that can be stored locally or on the cloud.
 2. **Select a Descriptor**: Choose a feature extraction method (e.g., GLCM, BitDesc, Haralick).
 3. **Retrieve Results**: View the most similar images alongside statistical insights.
 
+## Screenshots
+
+1. **User Interface**  
+   ![UI 1](screenshots/UI%201.png)  
+   ![UI 2](screenshots/UI%202.png)
+
+2. **Image Upload Process**  
+   ![Uploading a Picture](screenshots/uploading%20a%20picture.png)
+
+3. **Results Visualization**
+   - Similar Images Retrieved:  
+     ![Similar Images Displayed](screenshots/similar%20images%20displayed.png)
+   - Source Distribution Graph:  
+     ![Source Distribution Graph](screenshots/source%20distribution%20graph.png)
+
+## Demo Video
+
+[![CBIR Demo](screenshots/UI%201.png)](https://www.youtube.com/watch?v=tAgrRCHSZtg)
+
 ## Installation
 
 ### Prerequisites
