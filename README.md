@@ -174,7 +174,8 @@ Contributions are welcome! Please follow these steps:
 ## Acknowledgments
 
 - [BitDesc Documentation](https://pypi.org/project/Bitdesc/)
-- [GLCM and Haralick Descriptor References]
+- [GLCM Descriptor Explanation](https://www.mathworks.com/help/images/texture-analysis-using-the-gray-level-co-occurrence-matrix-glcm.html)
+- [Haralick Features Guide](https://cvexplained.wordpress.com/2020/07/22/10-6-haralick-texture/)
 
 ## Future Enhancements
 
