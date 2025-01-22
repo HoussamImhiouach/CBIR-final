@@ -29,6 +29,42 @@ This project uses an image dataset that can be stored locally or on the cloud.
 
 Ensure **Python 3.8+** is installed on your system.
 
+Follow these steps to set up the project locally:
+
+1. **Clone the Repository**:
+
+   ```bash
+   git clone https://github.com/HoussamImhiouach/CBIR-final.git
+   ```
+
+2. **Navigate to the Project Directory**:
+
+   ```bash
+   cd CBIR-final
+   ```
+
+3. **Create a Virtual Environment**:
+
+   ```bash
+   python -m venv venv
+   ```
+
+4. **Activate the Virtual Environment**:
+
+   - On Windows:
+     ```bash
+     venv\Scripts\activate
+     ```
+   - On macOS/Linux:
+     ```bash
+     source venv/bin/activate
+     ```
+
+5. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
 ## Technologies Used
 
 - **Programming Language**: Python
@@ -40,6 +76,71 @@ Ensure **Python 3.8+** is installed on your system.
   - **Matplotlib**: Data visualization
   - **Pillow**: Image file handling
 
+## Directory Structure
+
+The project is structured as follows:
+
+```
+CBIR-final/
+├── dataset/                  # Contains the image dataset used by the app
+├── app.py                   # Main Python script for running the app
+├── app_distance.py          # Script for distance calculations
+├── data_processing.py       # Script for data preprocessing
+├── descriptor.py            # Script for feature extraction (GLCM, BitDesc, etc.)
+├── distances.py             # Contains distance metrics
+├── input_parameters.py      # Handles input parameters for the app
+├── streamlit_app.py         # Main Streamlit UI script
+├── requirements.txt         # Dependencies for the project
+├── packages.txt             # Additional packages needed for deployment
+├── README.md                # Documentation for the project
+└── <other files/directories>
+```
+
+## Usage
+
+1. **Start the Streamlit App**:
+
+   ```bash
+   streamlit run streamlit_app.py
+   ```
+
+2. **Upload an Image**: Use the interface to upload a query image.
+
+3. **View Results**: The app will display images from the dataset that are similar to the uploaded image.
+
+## Challenges Faced
+
+- **Dependency Management**: Resolving conflicts between required packages and ensuring compatibility with Streamlit Cloud.
+- **Module Import Issues**: Adjusting paths and fixing case-sensitive imports during deployment.
+- **Dataset Handling**: Organizing and processing a large dataset efficiently for real-time querying.
+- **Visualization**: Creating an intuitive UI for both image retrieval and statistical insights.
+
+## Lessons Learned
+
+- Gained expertise in setting up and deploying Streamlit applications.
+- Learned to troubleshoot and resolve Python package issues effectively.
+- Improved understanding of image descriptors and their application in CBIR systems.
+- Enhanced skills in optimizing project structure for better maintainability.
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Submit a pull request for review.
+
+## Acknowledgments
+
+- [BitDesc Documentation](https://pypi.org/project/Bitdesc/)
+- [GLCM and Haralick Descriptor References]
+
+## Future Enhancements
+
+- Add support for more advanced descriptors.
+- Optimize for larger datasets.
+- Enhance the UI with additional visualization options.
